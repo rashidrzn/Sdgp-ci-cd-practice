@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+{% block head %}
+<style>
+.content-section content{
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 90px;
+}
+.content h1:hover{
+   color:  #009688;
+   transition: 0.7s;
+}
+.content p{
+    text-align: center;
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+.content-section p{
+    text-align: center;
+    margin: 20px auto;
+    font-weight: 100;
+
+}
+
+button{
+
+    width: 200PX;
+    padding: 15PX 0;
+    text-align: center;
+    margin: 20PX 10PX;
+    border-radius: 25px;
+    font-weight: bold;
+    border:2px solid #009688;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+}
+.content-section button{
+
+ width: 200PX;
+    padding: 10PX 0;
+    text-align: center;
+    margin-left:100px;
+    margin-right:10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border:2px solid #009688;
+    background: transparent;
+
+}
+
+.button:hover{
+    transform: 0.5s;
+    background: #009688;
+}
+
+
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="content-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3"><h1>
+                Home page
+                {% if session['name'] %}
+                Welcome {{ session['name'] }}
+                {% else %}
+                you're not log in
+                {% endif %}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="content-section">
+    <div class="content">
+        <h1>CROWD COUNTING APPLICATION</h1>
+        <P>"Accurately counting every head in the <br>crowd, every time."</P>
+
+        <!--            <div>-->
+        <!--                <button type="button">LEARN MORE</button>-->
+        <!--                <button type="button">Login</button>-->
+
+        <!--            </div>-->
+    </div>
+</div>
+<div class="content-section">
+    <!--            <div class="content">-->
+    <!--            <h1>CROWD COUNTING APPLICATION</h1>-->
+    <P>"Stay connected with <br>US"</P>
+
+    <div>
+        <a href="terms">
+        <button class="button">LEARN MORE</button>
+            </a>
+        <!--                <button class="button">Login</button>-->
+        <a href="login">
+            <button class="button">Login</button>
+        </a>
+
+        <!--            </div>-->
+    </div>
+</div>
+<!--    {% for post in posts %}-->
+<!--        <article class="media content-section">-->
+<!--          <div class="media-body">-->
+<!--            <div class="article-metadata">-->
+<!--              <a class="mr-2" href="#">{{ post.author }}</a>-->
+<!--              <small class="text-muted">{{ post.date_posted }}</small>-->
+<!--            </div>-->
+<!--            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>-->
+<!--            <p class="article-content">{{ post.content }}</p>-->
+<!--          </div>-->
+<!--        </article>-->
+<!--    {% endfor %}-->
+{% endblock content %}

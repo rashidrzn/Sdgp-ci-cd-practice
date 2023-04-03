@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{ % block content %}
+<style>
+.content-section content{
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 90px;
+}
+.content h1:hover{
+   color:  #009688;
+   transition: 0.7s;
+}
+.content p{
+    text-align: center;
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+.content-section p{
+    text-align: center;
+    margin: 20px auto;
+    font-weight: 100;
+
+}
+
+button{
+
+    width: 200PX;
+    padding: 15PX 0;
+    text-align: center;
+    margin: 20PX 10PX;
+    border-radius: 25px;
+    font-weight: bold;
+    border:2px solid #009688;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+}
+.content-section button{
+
+ width: 200PX;
+    padding: 10PX 0;
+    text-align: center;
+    margin-left:100px;
+    margin-right:10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border:2px solid #009688;
+    background: transparent;
+
+}
+
+
+
+
+
+</style>
+
+{% block content %}
+
+  <div class="content-section">
+    <div>
+   <div class="terms-box">
+        <div class="terms-text">
+           <h2>Terms Of Services</h2>
+           <p>Last Edit: 03/03/2023</p>
+           <p>Greetings Users</p>
+           <p>Acceptance of terms: Make it clear that by using your application, users agree to be bound by the terms of service.</p>
+           <p>Use of application:  How users are permitted to use our application, and any limitations on use (e.g. prohibiting the use of the application for illegal or unauthorized purposes).</p>
+           <p>User accounts: If our application requires user accounts,  how users can create and maintain their accounts, and any requirements for passwords or other security measures.</p>
+           <p>Intellectual property:  your ownership of any trademarks, copyrights, or other intellectual property associated with your application, and prohibit users from reproducing or distributing this content without your permission.</p>
+           <p>User-generated content: If our application allows users to submit content (such as photos or comments), specify that the user retains ownership of their content, but grants our company a license to use and display the content within the application.</p>
+           <p>Privacy: our privacy policy and how user data is collected, used, and shared within the application.</p>
+           <p></p>
+        </div>
+        <h4>I Agree to the <span>Terms of Services</span> and I read the Privacy Notice </h4>
+    </div>
+<!--</div>-->
+<!--     <div class="terms-box">-->
+<!--        <div class="terms-text">-->
+<!--           <h2>Terms Of Services</h2>-->
+<!--           <p>Last Edit: 03/03/2023</p>-->
+<!--           <p>Greetings Users</p>-->
+<!--           <p>Acceptance of terms: Make it clear that by using your application, users agree to be bound by the terms of service.</p>-->
+<!--           <p>Use of application:  How users are permitted to use our application, and any limitations on use (e.g. prohibiting the use of the application for illegal or unauthorized purposes).</p>-->
+<!--           <p>User accounts: If our application requires user accounts,  how users can create and maintain their accounts, and any requirements for passwords or other security measures.</p>-->
+<!--           <p>Intellectual property:  your ownership of any trademarks, copyrights, or other intellectual property associated with your application, and prohibit users from reproducing or distributing this content without your permission.</p>-->
+<!--           <p>User-generated content: If our application allows users to submit content (such as photos or comments), specify that the user retains ownership of their content, but grants our company a license to use and display the content within the application.</p>-->
+<!--           <p>Privacy: our privacy policy and how user data is collected, used, and shared within the application.</p>-->
+<!--           <p></p>-->
+<!--        </div>-->
+<!--        <h4>I Agree to the <span>Terms of Services</span> and I read the Privacy Notice </h4>-->
+        <div class="button">
+           <button class="btn-red-btn">Accept</button>
+           <button class="btn-gray-btn">Decline</button>
+     </div>-->
+    </div>-->
+{% endblock content %}
+
+{ % endblock content %}

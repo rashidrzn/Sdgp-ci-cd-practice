@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+{% block head %}
+<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		header {
+			background-color: #333;
+			color: #333333;
+			padding: 20px;
+			text-align: center;
+		}
+		h1 {
+			margin: 0;
+		}
+		nav {
+			background-color: #ddd;
+			padding: 10px;
+		}
+		nav ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-align: center;
+		}
+		nav li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+		nav a {
+			color: #333;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		nav a:hover {
+			color: #666;
+		}
+		.section1 {
+			padding: 20px;
+			margin: 20px 0;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+
+
+
+		.www {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			background-color: #5f788a;
+			color: white;
+		}
+		.kk {
+			border: 1px solid black;
+			padding: 10px;
+			text-align: center;
+		}
+		.rr {
+			/* border: 1px solid black; */
+			/* padding-left: 3%; */
+			margin-top: 5%;
+			margin-bottom: 5%;
+			margin-left: 25%;
+			/* text-align: center; */
+		}
+
+		
+.kk:hover {
+  font-size: 120%;
+  color: rgb(126, 255, 214); 
+  background-color: black;
+}
+	</style>
+    {% endblock %}
+
+
+{% block content %}
+    <header>
+		<h1 style="color:white">Welcome to our about page</h1>
+	</header>
+
+    <section class="section1">
+		<h2>About us</h2>
+		<p>Crowd counting is a computer vision technique that involves estimating the number of people in an 
+			image or video frame. It is a challenging task due to factors such as varying sizes and shapes of
+			individuals, occlusion, and crowd density. However, using deep learning techniques, such as 
+			convolutional neural networks, it is possible to accurately estimate the number of people in
+			a given area. Crowd counting has many practical applications, such as crowd management, 
+			urban planning, security, and marketing. By accurately determining the number of people in 
+			a scene, businesses and organizations can make informed decisions about resource allocation,
+			improve safety and security, and optimize crowd control. 
+		 </p>
+	</section>
+
+
+	<section>
+	<div class="shared ">
+		<div class="container-fluid">
+		   <div class="row">
+			  <div class="col-xs-12">
+                 
+				<video width="150%"  loop autoplay muted class="VideoMain">
+					<source src="{{url_for('static', filename='imgs/MyVideo.mp4')}}" type="video/mp4">
+					Your browser does not support the video tag.
+				 </video>
+                
+                 
+               </div>
+            </div>
+         </div>
+      </div>
+	</section>
+	
+
+
+	
+		<section class="www">
+			{% for user in users %}
+			<div class="kk">
+				<p><b>{{user[0]}}</b></p>
+				<img src="{{user[1]}}"alt = "" width="100" height="90"  style="border-radius: 50%;">
+
+				<p>{{user[2]}}</p>
+				<p>{{user[3]}}</p>
+				<!-- <p>Email: <a href="mailto:oshini.20210855@iit.ac.lk" style="color: rgb(6, 172, 255);"><u>oshini.20210855@iit.ac.lk</u></a></p> -->
+				<p>IIT Student No: {{user[4]}}</p>
+				<p>Uow No: {{user[5]}}</p>
+			</div>
+			{% endfor %}
+		</section>
+		<br><br>
+
+	</body>
+	</html>
+
+
+{% endblock content %}

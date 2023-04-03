@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class="text-center">Head Counter</h1>
+
+        <h5 class="instruction">Upload your image below and get the count of the crowd.</h5><br>
+
+        
+
+        <form class="p-3 text-center" action="/" method="post" enctype="multipart/form-data">
+            <label for="counterfile" class="custom-file-upload">Upload Image</label>
+            <input type="file" name="counterfile" id="counterfile">
+            <span class="file-selected"></span>
+            <input class="btn btn-primary mt-3" type="submit" value="Count">
+        </form>
+
+<!--        <h2 class="instruction">Your Result</h2>-->
+<!--        <h5 class="instruction">The count of the crowd in your image is:</h5>-->
+
+<!--       <button id="ok-button" class="btn btn-primary mt-3">OK</button>-->
+
+        <script>
+            const okButton = document.getElementById('ok-button');
+
+            okButton.addEventListener('click', function() {
+              alert('You are done!');
+            });
+          </script>
+
+{% endblock content %}
